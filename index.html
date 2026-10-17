@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="scroll-pt-12">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,28 +8,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap&subset=latin-ext" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: { sign: '#0b4f9c', signal: '#ffc800', ink: '#13202f', paper: '#eef1f4', line: '#c9d2dc', muted: '#4a5968' },
-      fontFamily: { display: ['"Barlow Condensed"', 'sans-serif'], sans: ['Barlow', 'sans-serif'] }
-    }
-  }
-}
-</script>
-<style>
-html { scroll-behavior: smooth; }
-section[id] { scroll-margin-top: 72px; }
-.tread { height: 14px; background: repeating-linear-gradient(115deg, #13202f 0 10px, #ffc800 10px 22px); }
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #ff8a00; outline-offset: 2px; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="font-sans text-ink bg-white text-[17px] leading-relaxed antialiased">
+<body class="font-sans text-ink bg-white text-[17px] leading-relaxed antialiased pt-12">
 
-<header class="sticky top-0 z-30 bg-white border-b border-line">
+<div class="fixed left-0 top-0 z-[99999] flex h-12 w-full flex-row items-center justify-center gap-3 bg-ink px-3 pb-1.5 text-white md:gap-6">
+  <span class="whitespace-nowrap font-display text-sm font-semibold uppercase tracking-wider md:text-base md:tracking-widest">Przykładowa strona</span>
+  <a href="https://jantokarzewski.pl/strony-internetowe" class="shrink-0 whitespace-nowrap rounded bg-signal px-3 py-1 font-display text-sm font-bold uppercase tracking-wider text-ink transition-colors hover:bg-white md:text-base md:tracking-widest">Powrót</a>
+  <span class="tread pointer-events-none absolute inset-x-0 bottom-0 !h-1.5" aria-hidden="true"></span>
+</div>
+
+<header class="sticky top-12 z-30 bg-white border-b border-line">
   <div class="max-w-6xl mx-auto px-5 h-[68px] flex items-center justify-between gap-6">
     <a href="#" class="flex items-center gap-3" aria-label="AutoBieżnik – strona główna">
       <svg viewBox="0 0 40 40" class="w-10 h-10" aria-hidden="true">
@@ -257,7 +246,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   </div>
   <div class="border-t border-white/15">
     <div class="max-w-6xl mx-auto px-5 py-5 flex flex-col sm:flex-row sm:justify-between gap-2 text-sm text-white/70">
-      <p>© 2026 AutoBieżnik Serwis &amp; Wulkanizacja. NIP: 1234567890</p>
+      <div class="flex flex-col gap-2">
+        <p>© 2026 AutoBieżnik Serwis &amp; Wulkanizacja. NIP: 1234567890</p>
+        <p>Strona przygotowana przez <a href="https://jantokarzewski.pl" class="font-semibold underline hover:text-signal">Jana Tokarzewskiego</a>.</p>
+      </div>
       <p>Strona demonstracyjna. Firma i dane są fikcyjne. <a href="#zdjecia" class="underline hover:text-signal">Zdjęcia</a></p>
     </div>
   </div>

@@ -1,4 +1,4 @@
-# auto-shop-eng-demo
+# auto-shop-pl-demo
 
 A custom-coded, single-page website mockup for a fictional autoshop business. Built as a demonstration piece for my web development portfolio with a strict, editorial-style design.
 
